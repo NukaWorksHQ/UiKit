@@ -1,18 +1,12 @@
 import react from '@vitejs/plugin-react'
 import path from 'node:path'
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      insertTypesEntry: true
-    })
-  ],
+  plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(__dirname, 'src/index.js'),
       name: 'UiKit',
       formats: ['es', 'umd'],
       fileName: (format) => `uikit.${format}.js`

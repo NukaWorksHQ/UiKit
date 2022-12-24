@@ -12,7 +12,7 @@
   },
   "exports": {
     ".": {
-      "require": "./src/bung.ts"
+      "require": "./src/bung.js"
     }
   }
 }
