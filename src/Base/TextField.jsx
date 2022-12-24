@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 
 const TextFieldElement = styled.input`
@@ -29,8 +29,8 @@ const lightTheme = {
 }
 
 // eslint-disable-next-line react/display-name
-export const TextField :any = forwardRef<HTMLInputElement>((
-  { type, placeholder, className, disabled, ...props } :InferProps<typeof TextField.propTypes>,
+export const TextField = forwardRef((
+  { type, placeholder, className, disabled, ...props },
   ref) => (
     <ThemeProvider theme={lightTheme}>
       <TextFieldElement

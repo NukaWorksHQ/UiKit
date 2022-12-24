@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import { MenuItem } from './MenuItem'
 import styled, { keyframes } from 'styled-components'
 
@@ -36,7 +36,7 @@ const MenuListElement = styled.div`
 `
 // TODO Impl Theming
 
-export function MenuList ({ className, children, ...props }: InferProps<typeof MenuList.propTypes>) {
+export function MenuList ({ className, children, ...props }) {
   return (
     <MenuListElement
         className={['Base__MenuList', 'MenuList', className].join(' ')}

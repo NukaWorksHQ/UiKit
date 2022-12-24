@@ -1,7 +1,5 @@
-// @ts-nocheck
-
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 
@@ -46,7 +44,7 @@ export function DialogOverlay ({
   name,
   className,
   ...props
-}: InferProps<typeof DialogOverlay.propTypes>) {
+}) {
   const [displayDialog, setDisplayDialog] = React.useState({})
   const ref = useDetectClickOutside({
     onTriggered: () => {

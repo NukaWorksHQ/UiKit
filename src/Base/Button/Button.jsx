@@ -1,9 +1,9 @@
 import React, { forwardRef, useEffect, useState } from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import './Button.scss'
 
 // eslint-disable-next-line react/display-name
-export const Button: any = forwardRef<HTMLButtonElement>((
+export const Button = forwardRef((
   {
     children,
     color,
@@ -13,7 +13,7 @@ export const Button: any = forwardRef<HTMLButtonElement>((
     autofocus,
     label,
     ...props
-  }: InferProps<typeof Button.propTypes>, ref) => {
+  }, ref) => {
   const [disable, setDisable] = useState(false)
 
   useEffect(() => {

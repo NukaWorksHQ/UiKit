@@ -1,7 +1,5 @@
-// @ts-nocheck
-
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const SidebarItemElement = styled.div`
@@ -37,7 +35,7 @@ export function SidebarItem (
     className,
     onClick,
     ...props
-  }: InferProps<typeof SidebarItem.propTypes>) {
+  }) {
   return (
       <SidebarItemElement
           className={['Base__SidebarItem', 'SidebarItem', active ? 'Base__SidebarItem--Activated SidebarItemActive' : '', className].join(' ')}

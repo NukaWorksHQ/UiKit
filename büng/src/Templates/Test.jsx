@@ -1,12 +1,12 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Div = styled.div`
   color: deeppink;
 `
 
-export function Test ({ children, className, ...props }: InferProps<typeof Test.propTypes>) {
+export function Test ({ children, className, ...props }) {
   return (
     <Div
         className={['CATEGORY__test', 'test', className].join(' ')}

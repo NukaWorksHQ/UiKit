@@ -11,10 +11,9 @@ export default {
   }
 }
 
-const Template = (args :any) => <Text {...args} />
+const Template = args => <Text {...args} />
 
 export const Default = Template.bind({})
-// @ts-ignore
 Default.args = {
   text: 'Hello World !',
   disabled: false

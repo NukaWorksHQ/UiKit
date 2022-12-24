@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import { useDetectClickOutside } from 'react-detect-click-outside'
 import styled from 'styled-components'
 
-function menuDrop (displayMenu: boolean, children: any) {
+function menuDrop (displayMenu, children) {
   if (displayMenu) return children
 }
 
@@ -24,15 +24,15 @@ const MenuTitleElement = styled.div`
   }
 `
 
-export function Menu ({ children, className, title, ...props }: InferProps<typeof Menu.propTypes>) {
+export function Menu ({ children, className, title, ...props }) {
   const [displayMenu, setDisplayMenu] = useState(false)
   const ref = useDetectClickOutside({ onTriggered: () => setDisplayMenu(false) })
   const menuTitle = useRef(null)
 
   useEffect(() => {
-    if (displayMenu) { // @ts-ignore
+    if (displayMenu) {
       menuTitle.current.classList.add('active')
-    } else { // @ts-ignore
+    } else {
       menuTitle.current.classList.remove('active')
     }
   })

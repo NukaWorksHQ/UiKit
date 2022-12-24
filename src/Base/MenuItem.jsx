@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 
 const blinkAnim = keyframes`
@@ -32,7 +32,7 @@ const MenuItemElement = styled.div`
   }
 `
 
-export function MenuItem ({ children, className, onClick, ...props }: InferProps<typeof MenuItem.propTypes>) {
+export function MenuItem ({ children, className, onClick, ...props }) {
   return (
     <MenuItemElement
         className={['Base__MenuItem', 'MenuItem', className].join(' ')}

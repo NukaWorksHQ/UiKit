@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const SeparatorElement = styled.div`
@@ -8,7 +8,7 @@ const SeparatorElement = styled.div`
   border-radius: 300px;
 `
 
-export function Separator ({ className, ...props }: InferProps<typeof Separator.propTypes>) {
+export function Separator ({ className, ...props }) {
   return (
     <SeparatorElement className={['Misc__Separator', 'Separator', className].join(' ')} {...props} />
   )

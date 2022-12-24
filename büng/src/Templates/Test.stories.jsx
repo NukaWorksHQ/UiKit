@@ -7,8 +7,7 @@ export default {
   component: Test
 }
 
-const Template = (args :any) => <Test {...args} />
+const Template = args => <Test {...args} />
 
 export const Default = Template.bind({})
-// @ts-ignore
 Default.args = {}

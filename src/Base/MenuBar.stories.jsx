@@ -10,7 +10,7 @@ export default {
   component: MenuBar
 }
 
-const Template = (args :any) => <MenuBar {...args}>
+const Template = args => <MenuBar {...args}>
   <Menu title={'File'}>
     <MenuList>
       <MenuItem>New File...</MenuItem>
@@ -43,5 +43,4 @@ const Template = (args :any) => <MenuBar {...args}>
 </MenuBar>
 
 export const Default = Template.bind({})
-// @ts-ignore
 Default.args = {}

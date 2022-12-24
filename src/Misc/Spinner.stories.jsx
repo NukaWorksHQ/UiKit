@@ -17,17 +17,15 @@ export default {
   }
 }
 
-const Template = (args :any) => <Spinner {...args} />
+const Template = args => <Spinner {...args} />
 
 export const Default = Template.bind({})
-// @ts-ignore
 Default.args = {
   size: 'Medium',
   color: 'Default'
 }
 
 export const Blue = Template.bind({})
-// @ts-ignore
 Blue.args = {
   size: 'Medium',
   color: 'Blue'

@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const UiAppElement = styled.div`
@@ -14,7 +14,7 @@ const UiAppElement = styled.div`
   padding-inline: 1em;
 `
 
-export function UiApp ({ children, className, ...props }: InferProps<typeof UiApp.propTypes>) {
+export function UiApp ({ children, className, ...props }) {
   return (
     <UiAppElement
         className={['Appl__UiApp', 'UiApp', className].join(' ')}

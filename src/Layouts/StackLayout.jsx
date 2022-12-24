@@ -1,7 +1,5 @@
-// @ts-nocheck
-
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes, { string } from 'prop-types'
 import { Layout } from './Layout'
 import styled from 'styled-components'
 
@@ -17,7 +15,7 @@ export function StackLayout ({
   spacing,
   direction,
   ...props
-}: InferProps<typeof StackLayout.propTypes>) {
+}) {
   return (
       <StackLayoutElement
           className={['Layouts__StackLayout', 'StackLayout', className].join(' ')}
@@ -32,7 +30,7 @@ export function StackLayout ({
 
 StackLayout.propTypes = {
   className: PropTypes.string,
-  direction: PropTypes.oneOf<string>(['Vertical', 'Horizontal']),
+  direction: PropTypes.oneOf < string > (['Vertical', 'Horizontal']),
   spacing: PropTypes.number,
   children: PropTypes.any,
   props: PropTypes.any

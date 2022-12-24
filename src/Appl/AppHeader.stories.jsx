@@ -13,10 +13,9 @@ export default {
   }
 }
 
-const Template = (args :any) => <AppHeader {...args} />
+const Template = args => <AppHeader {...args} />
 
 export const Default = Template.bind({})
-// @ts-ignore
 Default.args = {
   title: 'Hello World !'
 }

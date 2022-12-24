@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import { Text } from '../Base/Text'
 import styled from 'styled-components'
 
@@ -28,7 +28,7 @@ const ContentElement = styled.div`
   flex-direction: row;
   gap: 5px;`
 
-export function AppHeader ({ children, className, title, ...props }: InferProps<typeof AppHeader.propTypes>) {
+export function AppHeader ({ children, className, title, ...props }) {
   return (
     <HeaderElement
         className={['Appl__Header', 'AppHeader', className].join(' ')}

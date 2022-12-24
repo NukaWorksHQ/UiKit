@@ -1,7 +1,5 @@
-// @ts-nocheck
-
 import React, { useEffect } from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 
 const LinkElement = styled.a`
@@ -42,7 +40,7 @@ export function Link ({
   disabled,
   href,
   ...props
-}: InferProps<typeof Link.propTypes>) {
+}) {
   const [disable, setDisable] = React.useState(false)
 
   useEffect(() => {

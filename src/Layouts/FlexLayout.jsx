@@ -1,7 +1,5 @@
-// @ts-nocheck
-
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes, { string } from 'prop-types'
 import styled from 'styled-components'
 import { StackLayout } from './StackLayout'
 
@@ -27,7 +25,7 @@ export function FlexLayout ({
   justifyContent,
   wrap,
   ...props
-}: InferProps<typeof FlexLayout.propTypes>) {
+}) {
   return (
     <FlexLayoutElement
         className={['Misc__FlexLayout', 'FlexLayout', className].join(' ')}
@@ -49,11 +47,11 @@ FlexLayout.propTypes = {
   className: PropTypes.string,
   children: PropTypes.any,
   spacing: PropTypes.number,
-  direction: PropTypes.oneOf<string>(['Vertical', 'Horizontal']),
-  alignItems: PropTypes.oneOf<string>(['Start', 'Center', 'End', 'Stretch']),
-  alignContent: PropTypes.oneOf<string>(['Start', 'Center', 'End', 'Stretch']),
-  justifyItems: PropTypes.oneOf<string>(['Start', 'Center', 'End', 'Stretch']),
-  justifyContent: PropTypes.oneOf<string>(['Start', 'Center', 'End', 'Stretch']),
-  wrap: PropTypes.oneOf<string>(['wrap', 'nowrap']),
+  direction: PropTypes.oneOf < string > (['Vertical', 'Horizontal']),
+  alignItems: PropTypes.oneOf < string > (['Start', 'Center', 'End', 'Stretch']),
+  alignContent: PropTypes.oneOf < string > (['Start', 'Center', 'End', 'Stretch']),
+  justifyItems: PropTypes.oneOf < string > (['Start', 'Center', 'End', 'Stretch']),
+  justifyContent: PropTypes.oneOf < string > (['Start', 'Center', 'End', 'Stretch']),
+  wrap: PropTypes.oneOf < string > (['wrap', 'nowrap']),
   props: PropTypes.any
 }

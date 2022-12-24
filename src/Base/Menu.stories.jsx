@@ -9,7 +9,7 @@ export default {
   component: Menu
 }
 
-const Template = (args :any) =>
+const Template = args =>
     <Menu {...args}>
       <MenuList>
         <MenuItem>About This Mac</MenuItem>
@@ -29,7 +29,6 @@ const Template = (args :any) =>
     </Menu>
 
 export const Default = Template.bind({})
-// @ts-ignore
 Default.args = {
   title: 'Apple Logo'
 }

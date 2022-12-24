@@ -1,7 +1,5 @@
-// @ts-nocheck
-
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 
 const spinAnim = keyframes`
@@ -25,7 +23,7 @@ const SvgElement = styled.svg`
   width: auto;
 `
 
-export function Spinner ({ className, size, color, ...props }: InferProps<typeof Spinner.propTypes>) {
+export function Spinner ({ className, size, color, ...props }) {
   return (
       <SpinnerElement
           className={['Misc__Spinner', `Misc__Spinner--${color}`, `Misc__Spinner--${size}`, className].join(' ')}

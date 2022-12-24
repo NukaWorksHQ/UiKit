@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const MenuBarElement = styled.div`
@@ -9,7 +9,7 @@ const MenuBarElement = styled.div`
 
 export const HoverContext = React.createContext('false')
 
-export function MenuBar ({ children, className, ...props }: InferProps<typeof MenuBar.propTypes>) {
+export function MenuBar ({ children, className, ...props }) {
   return (
       <HoverContext.Provider value={'false'}>
         <MenuBarElement

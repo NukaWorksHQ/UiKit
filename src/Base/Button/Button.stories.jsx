@@ -22,10 +22,9 @@ export default {
   }
 }
 
-const Template = (args :any) => <Button {...args} />
+const Template = args => <Button {...args} />
 
 export const Default = Template.bind({})
-// @ts-ignore
 Default.args = {
   color: 'Default',
   theme: 'Light',
@@ -35,7 +34,6 @@ Default.args = {
 }
 
 export const Primary = Template.bind({})
-// @ts-ignore
 Primary.args = {
   color: 'Primary',
   theme: 'Light',
@@ -45,7 +43,6 @@ Primary.args = {
 }
 
 export const Success = Template.bind({})
-// @ts-ignore
 Success.args = {
   color: 'Success',
   theme: 'Light',
@@ -55,7 +52,6 @@ Success.args = {
 }
 
 export const Warning = Template.bind({})
-// @ts-ignore
 Warning.args = {
   color: 'Warning',
   theme: 'Light',
@@ -65,7 +61,6 @@ Warning.args = {
 }
 
 export const Alert = Template.bind({})
-// @ts-ignore
 Alert.args = {
   color: 'Alert',
   theme: 'Light',
@@ -75,7 +70,6 @@ Alert.args = {
 }
 
 export const Disabled = Template.bind({})
-// @ts-ignore
 Disabled.args = {
   color: 'Disabled',
   theme: 'Light',

@@ -1,7 +1,5 @@
-// @ts-nocheck
-
 import React, { useState } from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import '../Common/Assets/Themes/index.scss'
 import { SidebarItem } from './SidebarItem'
 import SidebarContext from './SidebarContext'
@@ -58,7 +56,7 @@ const MenuBtnElement = styled(SidebarItem)`
   width: fit-content;
 `
 
-export function Sidebar ({ children, className, closed, ...props }: InferProps<typeof Sidebar.propTypes>) {
+export function Sidebar ({ children, className, closed, ...props }) {
   const [close, setClose] = useState(closed)
 
   const handleToggle = () => setClose(!close)

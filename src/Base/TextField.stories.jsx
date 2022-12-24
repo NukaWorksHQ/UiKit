@@ -15,10 +15,9 @@ export default {
   }
 }
 
-const Template = (args :any) => <TextField {...args} />
+const Template = args => <TextField {...args} />
 
 export const Default = Template.bind({})
-// @ts-ignore
 Default.args = {
   placeholder: 'Hello World !',
   type: 'text',
